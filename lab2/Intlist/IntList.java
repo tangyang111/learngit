@@ -7,6 +7,17 @@ import java.util.Formatter;
  *         [Do not modify this file.]
  */
 public class IntList {
+    public static void main(String[] args){
+        IntList A = IntList.list(0, 1, 2, 3, 4, 5);
+//        IntList A = IntList.list();
+        IntList B = IntList.list(6, 7);
+//        IntList res = IntList.dcatenate(A, B);
+//        System.out.println("res = " + res);
+//        System.out.println("A = " + A);
+        IntList res = IntList.catenate(A, B);
+        System.out.println("res = " + res);
+        System.out.println("A = " + A);
+    }
     /**
      * First element of list.
      */
@@ -81,7 +92,25 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        /*
+        IntList pta = A;
+        IntList ppta = pta;
+        while(pta != null){
+            ppta = pta;
+            pta = pta.tail;
+        }
+        ppta.tail = B;
+        return A;
+        */
+        if(A == null){
+            A = B;
+            return A;
+        }
+        else{
+            A.tail = dcatenate(A.tail, B);
+            return A;
+        }
+
     }
 
     /**
@@ -90,7 +119,31 @@ public class IntList {
      */
     public static IntList catenate(IntList A, IntList B) {
         //TODO:  fill in method
-        return null;
+        if(A == null){
+            return B;
+        }
+        else{
+            return new IntList(A.head, catenate(A.tail, B));
+        }
+
+//        IntList pta = A;
+//        IntList ptr;
+//        IntList res;
+//        if(pta == null){
+//            res = B;
+//        }
+//        else{
+//            ptr = new IntList(pta.head, null);
+//            res = ptr;
+//            while(pta.tail != null){
+//                pta = pta.tail;
+//                ptr.tail = new IntList(pta.head, null);
+//                ptr = ptr.tail;
+//            }
+//            ptr.tail = B;
+//        }
+//        return res;
+
     }
 
 
