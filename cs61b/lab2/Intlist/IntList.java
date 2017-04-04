@@ -11,12 +11,13 @@ public class IntList {
         IntList A = IntList.list(0, 1, 2, 3, 4, 5);
 //        IntList A = IntList.list();
         IntList B = IntList.list(6, 7);
-//        IntList res = IntList.dcatenate(A, B);
-//        System.out.println("res = " + res);
-//        System.out.println("A = " + A);
-        IntList res = IntList.catenate(A, B);
+        IntList res = IntList.dcatenate(A, B);
         System.out.println("res = " + res);
         System.out.println("A = " + A);
+//        IntList res = IntList.catenate(A, B);
+//        System.out.println("res = " + res);
+//        System.out.println("A = " + A);
+
     }
     /**
      * First element of list.
@@ -93,24 +94,20 @@ public class IntList {
 
     public static IntList dcatenate(IntList A, IntList B) {
         //TODO:  fill in method
-        /*
         IntList pta = A;
-        IntList ppta = pta;
-        while(pta != null){
-            ppta = pta;
+        while(pta.tail != null){
             pta = pta.tail;
         }
-        ppta.tail = B;
+        pta.tail = B;
         return A;
-        */
-        if(A == null){
+/*        if(A == null){
             A = B;
             return A;
         }
         else{
             A.tail = dcatenate(A.tail, B);
             return A;
-        }
+        }*/
 
     }
 
