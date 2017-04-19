@@ -66,6 +66,22 @@ public class IntListTest {
         assertEquals(IntList.list(1, 2, 3), A);
     }
 
+    @Test
+    public void testReverse() {
+        assertEquals(null, IntList.reverse(null));
+        assertEquals(null, IntList.reverseRecursively(null));
+
+        IntList A = IntList.list(1, 2, 3, 4);
+        IntList B = IntList.list(1, 2, 3, 4);
+        IntList exp = IntList.list(4, 3, 2, 1);
+        assertEquals(exp, IntList.reverse(A));
+        assertEquals(exp, IntList.reverseRecursively(B));
+
+        assertEquals(A, IntList.list(1));
+        assertEquals(B, IntList.list(1));
+
+    }
+
     /** If you're running this from the command line, you'll need
       * to add a main method. See ArithmeticTest.java for an
       * example. */
