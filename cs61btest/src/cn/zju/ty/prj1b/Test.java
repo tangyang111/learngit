@@ -5,6 +5,6 @@ package cn.zju.ty.prj1b;
  */
 public class Test {
     public static void main(String[] args) {
-        StudentArrayDeque<Integer> s = new StudentArrayDeque<Integer>();
+//        StudentArrayDeque<Integer> s = new StudentArrayDeque<Integer>();
     }
 }

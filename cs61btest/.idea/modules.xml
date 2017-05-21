@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cs61btest.iml" filepath="$PROJECT_DIR$/cs61btest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test1/test1.iml" filepath="$PROJECT_DIR$/test1/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testModule/testModule.iml" filepath="$PROJECT_DIR$/testModule/testModule.iml" />
     </modules>
   </component>
 </project>

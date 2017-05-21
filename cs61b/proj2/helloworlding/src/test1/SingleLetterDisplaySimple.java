@@ -1,3 +1,5 @@
+package test1;
+
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.geometry.VPos;
@@ -15,13 +17,11 @@ import javafx.stage.Stage;
  * the window. Pressing the up and down arrows causes the font size to increase and decrease,
  * respectively.
  */
-@SuppressWarnings("Duplicates")
 public class SingleLetterDisplaySimple extends Application {
     private static final int WINDOW_WIDTH = 500;
     private static final int WINDOW_HEIGHT = 500;
 
     /** An EventHandler to handle keys that get pressed. */
-    @SuppressWarnings("Duplicates")
     private class KeyEventHandler implements EventHandler<KeyEvent> {
         int textCenterX;
         int textCenterY;
@@ -54,7 +54,6 @@ public class SingleLetterDisplaySimple extends Application {
             root.getChildren().add(displayText);
         }
 
-        @SuppressWarnings("Duplicates")
         @Override
         public void handle(KeyEvent keyEvent) {
             if (keyEvent.getEventType() == KeyEvent.KEY_TYPED) {
